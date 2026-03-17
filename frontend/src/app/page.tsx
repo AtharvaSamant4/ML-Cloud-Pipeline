@@ -38,7 +38,7 @@ export default function Home() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://65.0.182.39:8000", {
+      const response = await fetch("/api/analyze", {
         method: "POST",
         body: formData,
       });
@@ -64,7 +64,7 @@ export default function Home() {
       if (!jobId) return;
 
       try {
-        const response = await fetch(`http://65.0.182.39:8000/results/${jobId}`);
+        const response = await fetch(`/api/results/${jobId}`);
         if (!response.ok) {
           throw new Error("Failed to fetch results");
         }
