@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+cloudinary
+python-dotenv
+sqlalchemy
+psycopg2-binary
+ultralytics
+pillow
+requests
